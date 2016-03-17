@@ -7,7 +7,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="ionic/css/ionic.min.css">
         <meta charset="UTF-8">
-        <title>Blank App Designer Cordova Web App Project Template</title>
+        <title>Poll Pal</title>
         <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 
         <!--
@@ -69,6 +69,9 @@
         <script type="application/javascript" src="ionic/js/ionic.bundle.js"></script>
         <script type="application/javascript" src="js/index_init_services.js"></script>
         <script type="application/javascript" src="marginal/marginal-position.js"></script>
+        <script type="application/javascript" src="xdk/appdesigner/js/rest-of-space.js"></script>
+        <script type="application/javascript" src="js/index_user_scripts.js"></script>
+        <script type="application/javascript" src="xdk/ad/ionic_subpage.js"></script>
     </head>
 
     <body ng-app="myApp">
@@ -76,6 +79,21 @@
         <!-- IMPORTANT: Do not include a weinre script tag as part of your release builds! -->
         <!-- Place your remote debugging (weinre) script URL from the Test tab here, if it does not work above -->
         <!-- <script src="http://debug-software.intel.com/target/target-script-min.js#insertabiglongfunkynumberfromthexdkstesttab"></script> -->
+        <script src="http://debug-software.intel.com/target/target-script-min.js#aR7Xe9_PyI3cJ8_qbMVklAoH1ao0TLRjuyly-_grif0"></script>
+        <script>
+            $ionicPlatform.ready(function()
+            {
+#                ionic.Platform.fullScreen();
+                if (window.StatusBar)
+                {
+                    return StatusBar.show();
+                }
+            });
+            function Exit()
+            {
+
+            }
+        </script>
         <div class="upage GenericScreen_bg" id="mainpage">
             <div class="upage-outer">
                 <div class="upage-content ac0 content-area vertical-col left" id="page_91_74">
@@ -90,31 +108,45 @@
 
                     <div class="sidebar-content content-area vertical-col">
 
-                        <div class="widget uib_w_2 scale-image d-margins" data-uib="media/img" data-ver="0" id="NavPane_List">
+                        <div class="widget uib_w_2 scale-image d-margins" data-uib="media/img" data-ver="0" id="NavPaneList_Img">
                             <figure class="figure-align">
                                 <img src="images/NavPane_Header.jpg" id="NavPaneHeaderImg">
 
                                 <figcaption data-position="bottom"></figcaption>
                             </figure>
                         </div>
-                        <ion-list class="widget uib_w_3 d-margins" data-uib="ionic/list" data-ver="0" id="NavPane_List">
-                            <ion-item class="item widget uib_w_4" data-uib="ionic/list_item" data-ver="0" id="NavPaneList_FindBooth">Find Booth</ion-item>
-                            <ion-item class="item widget uib_w_5" data-uib="ionic/list_item" data-ver="0" id="NavPaneList_PublicOpinion">Public Opinion</ion-item>
 
-                        </ion-list>
-                        <div class="grid grid-pad urow uib_row_1 row-height-1" data-uib="layout/row" data-ver="0">
-                            <div class="col uib_col_1 col-0_12-12" data-uib="layout/col" data-ver="0">
-                                <div class="widget-container content-area vertical-col">
-                                    <span class="uib_shim"></span>
+                        <button class="button widget uib_w_14 d-margins" data-uib="ionic/button" data-ver="0" id="NavPaneBtnGrid_BtnFindBooth">Find Booth</button>
+                        <button class="button widget uib_w_13 d-margins" data-uib="ionic/button" data-ver="0" id="NavPaneBtnGrid_BtnPublicOpinion">Public Opinion</button>
+                        <div class="uib-grid widget uib_w_15 grid-text grid-height d-margins" data-uib="layout/grid" data-ver="1" id="NavPane_BtnGrid">
+                            <div class="uib-grid-row">
+                                <div class="uib-grid-cell widget-container">
+
                                 </div>
                             </div>
-                            <span class="uib_shim"></span>
-                        </div>
+                            <div class="uib-grid-row">
+                                <div class="uib-grid-cell widget-container">
 
+                                </div>
+                            </div>
+                            <div class="uib-grid-row">
+                                <div class="uib-grid-cell widget-container"></div>
+                            </div>
+                            <div class="uib-grid-row">
+                                <div class="uib-grid-cell widget-container"></div>
+                            </div>
+                            <div class="uib-grid-row">
+                                <div class="uib-grid-cell widget-container"></div>
+                            </div>
+                            <div class="uib-grid-row">
+                                <div class="uib-grid-cell widget-container"></div>
+                            </div>
+                        </div>
                         <div class="button-bar widget uib_w_6 d-margins" data-uib="ionic/button_bar" data-ver="0">
                             <button class="button widget uib_w_7" data-uib="ionic/button" data-ver="0" id="NavPaneBtn_About">About</button>
                             <button class="button widget uib_w_8" data-uib="ionic/button" data-ver="0" id="NavPaneBtn_ContactUs">Contact Us</button>
                         </div>
+                        <button class="button widget uib_w_12 d-margins" data-uib="ionic/button" data-ver="0" id="NavPane_BtnExit" onclick="Exit();">Exit</button>
                     </div>
                 </div>
                 <ion-header-bar class="bar inner-element uib_w_9 bar-dark bar-header" data-uib="ionic/header" data-ver="0" id="FindBooth_Header">
